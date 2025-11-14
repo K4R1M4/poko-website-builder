@@ -4,6 +4,22 @@
 #
 name: Deploy 11ty site to Pages
 
+env:
+  BUILD_PATH: "." # default value when not using subfolders
+  # BUILD_PATH: subfolder
+  BASE_URL: ${{ vars.BASE_URL }}
+  PROD_URL: ${{ vars.PROD_URL }}
+  CONTENT_DIR: ${{ vars.CONTENT_DIR }}
+  CMS_AUTH_URL: ${{ vars.CMS_AUTH_URL }}
+  PROD_BRANCH: ${{ vars.PROD_BRANCH }}
+  CMS_IMPORT: ${{ vars.CMS_IMPORT }}
+  CMS_REPO: ${{ vars.CMS_REPO }}
+  CMS_BACKEND: ${{ vars.CMS_BACKEND }}
+  CMS_BRANCH: ${{ vars.CMS_BRANCH }}
+  _VARS: ${{ toJson(vars) }}
+  # We can retrieve more info from the github context
+  REPO_URL: ${{ github.event.repository.html_url }}
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -24,10 +40,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  BUILD_PATH: "." # default value when not using subfolders
-  # BUILD_PATH: subfolder
-
 jobs:
   build:
     name: Build
@@ -38,17 +50,23 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
+          if [ -f "${{ github.workspace }}/bun.lock" ]; then
+            echo "manager=bun" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
-            echo "lockfile=yarn.lock" >> $GITHUB_OUTPUT
+            echo "runner=bun --bun" >> $GITHUB_OUTPUT
+            echo "lockfile=bun.lock" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/bun.lockb" ]; then
             echo "manager=bun" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=bun --bun" >> $GITHUB_OUTPUT
             echo "lockfile=bun.lockb" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            echo "lockfile=yarn.lock" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT

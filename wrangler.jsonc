@@ -1,13 +1,12 @@
 {
   "name": "poko-website-builder",
-  "pages_build_output_dir": "./dist",
   "compatibility_date": "2025-03-10",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "pages_build_output_dir": "./dist", // Replaced on Workers by `assets.directory`
+  "preview_urls": true, // Default
+  // "compatibility_flags": ["nodejs_compat"], // Was required for keystatic
   "send_metrics": true,
   "vars": {
-    // "BUN_VERSION": "1.2.8"
+    "BUN_VERSION": "1.2.22"
   }
   // "env": {
   //   "staging": {

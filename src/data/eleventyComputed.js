@@ -1,18 +1,72 @@
-import { USER_DIR } from "../../env.config.js";
+import { USER_DIR, languages, SITE_NAME } from "../../env.config.js";
 // Was usefull when parents were declared in references
 // import temp from './temp.js';
 import mapInputPathToUrl from "../utils/mapInputPathToUrl.js";
 
-// const autoTagNameDico = {
-//     pages: 'page',
-//     articles: 'article',
-//     people: 'person',
-//     organizations: 'organization'
-// }
+const defaultLang = languages.find((lang) => lang.isWebsiteDefault)?.code;
 
 export default {
   // ...temp,
-  lang: (data) => data.lang || data.globalSettings?.lang || "en",
+  language: (data) => {
+    // Display collection names only
+    const filePathStem = data.page.filePathStem;
+    const language = languages.find((lang) =>
+      lang.defaultPrefixRegex.test(filePathStem)
+    );
+
+    return language;
+  },
+  lang: (data) => {
+    // TODO: We should be able to rely on data.languages computed above but it seems unreliable...
+    const filePathStem = data.page.filePathStem;
+    const language = languages.find((lang) =>
+      lang.defaultPrefixRegex.test(filePathStem)
+    );
+
+    return language?.code || data.lang || defaultLang;
+  },
+  layout: (data) => {
+    return data?.pageLayout || data?.layout;
+  },
+  templateTranslations: (data) => {
+    const { translationKey, localizationKey } = data;
+    const allTemplates = data.collections.all;
+    const templates = allTemplates
+      .filter((template) => {
+        return (
+          (template.data.translationKey &&
+            template.data.translationKey === translationKey) ||
+          (template.data.localizationKey &&
+            template.data.localizationKey === localizationKey)
+        );
+      })
+      .map((template) => {
+        return {
+          // isCurrent: template.data.lang === data.lang,
+          // isDefault: template.data.lang === defaultLang,
+          isCurrentLang: template.data.lang === data.lang,
+          isDefaultLang: template.data.lang === defaultLang,
+
+          fileSlug: template.page.fileSlug,
+          filePathStem: template.page.filePathStem,
+          translationKey: template.data.translationKey,
+          localizationKey: template.data.localizationKey,
+          lang: template.data.lang,
+          url: template.page.url,
+          name: template.data.name,
+          title: template.data.title,
+          pagePreview: template.data.pagePreview,
+        };
+      });
+
+    const orderedTemplates = languages
+      .map((lang) => {
+        return templates.find((template) => template.lang === lang.code);
+      })
+      .filter(Boolean);
+
+    return orderedTemplates;
+  },
   h1Content: (data) => {
     const { rawInput } = data.page;
 
@@ -30,7 +84,9 @@ export default {
   },
   title: (data) => data.title || data.name || data.h1Content,
   permalink: (data) => {
-    // console.log({tags: data.tags})
+    if (data.generatePage === "previewOnly") {
+      return false;
+    }
     if (typeof data.permalink === "boolean" && !data.permalink) {
       return false;
     }
@@ -39,17 +95,8 @@ export default {
       return data.permalink;
     }
 
-    // const filePathStem = data.page.filePathStem
-    //     .replace(/^\/pages/, '')
-    //     .replace(new RegExp(`^\/${USER_DIR}`), '')
-    //     .replace(/\/index$/, '') + '/index'
-
     const url = mapInputPathToUrl(data.page.filePathStem);
     const permalink = url.permalink;
-
-    if (permalink.startsWith("/_")) {
-      return false;
-    }
 
     // TODO: understand why permalinks fail when I reference this
     // const parentsPath = (data.parentSlugs || []).join('/');
@@ -76,7 +123,8 @@ export default {
   // eleventyNavigation: (data) => data.eleventyNavigation?.add ? data.eleventyNavigation : undefined,
   metadata: (data) => {
     const gMeta = data.globalSettings?.metadata || {};
-    const siteName = data.globalSettings?.siteName || gMeta.siteName || "";
+    // const siteName = data.globalSettings?.siteName || gMeta.siteName || "";
+    const siteName = SITE_NAME;
     const titleCascade = data.metadata?.title || data.title || null;
     return {
       title: [titleCascade, siteName].filter(Boolean).join(" | "),
@@ -84,7 +132,18 @@ export default {
       image: (data.metadata?.image || gMeta.image) ?? "",
     };
   },
+  pagePreview: (data) => {
+    const title = data.preview?.title || data.title || null;
+    const description =
+      data.preview?.description || data.metadata?.description || null;
+    const image = data.preview?.image || data.metadata?.image || null;
+    return {
+      title,
+      description,
+      image,
+    };
+  },
   // Just to make them easier to find in the data object
-  date: (data) => data.page?.date,
-  url: (data) => data.page?.url,
+  date: (data) => data.date || data.page?.date,
+  url: (data) => data.url || data.page?.url,
 };
