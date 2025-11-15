@@ -16,10 +16,10 @@
     <meta name="description" content="{{ metadata.description }}" />
     <meta property="og:description" content="{{ metadata.description }}" />
     {% endif %} {% if metadata.image %}
-    <meta name="image" content="{{ metadata.image | og }}" />
-    <meta property="og:image" content="{{ metadata.image | og }}" />
-    <meta property="og:image:url" content="{{ metadata.image | og }}" />
-    <meta property="twitter:image" content="{{ metadata.image | og }}" />
+    <meta name="image" content="{{ metadata.image | ogImage }}" />
+    <meta property="og:image" content="{{ metadata.image | ogImage }}" />
+    <meta property="og:image:url" content="{{ metadata.image | ogImage }}" />
+    <meta property="twitter:image" content="{{ metadata.image | ogImage }}" />
     {% endif %}
 
     <!-- Alternate langs -->
@@ -110,10 +110,10 @@
 
     <!-- Footer -->
     <footer class="full-bleed-before">
-      <div class="infos grid-auto">
+      <div class="infos grid-fluid">
         <div>
           <p>
-            {% icon "googlemaps" %}{{ dico.address }}<br>
+            {% icon "googlemaps" %}{{ vars.address }}<br>
             <a href="{{ data.gmaps }}" target="_blank" rel="noopener noreferrer" style="white-space: pre-line">{{ data.address | safe }}</a>
           </p>
         </div>
@@ -141,7 +141,7 @@
       </div>
       <div class="center intrinsic stack">
         <p class="copyright">{{globalSettings.siteName}} &copy; {{data.year}}</p>
-        <p>{{dico.poweredBy | safe}}</p>
+        <p>{{vars.poweredBy | safe}}</p>
       </div>
     </footer>
   </body>

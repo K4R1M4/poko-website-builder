@@ -18,7 +18,7 @@ metadata:
 
 # Contact
 
-## {{ dico.address }}
+## {{ vars.address }}
 
 Una Scelta - Azienda Agricola Santarello  
 Contrada Fornacchia  
@@ -33,7 +33,7 @@ Strada della Poggiarella 98b,
 
 {{ data.email | emailLink }}
 
-## {{ dico.access }}
+## {{ vars.access }}
 
 **By plane:**
 Rome-Fiumicino Airport

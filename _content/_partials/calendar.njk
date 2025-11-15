@@ -10,7 +10,7 @@ toLocaleString(lang, { weekday: "short" }) | replace(".", "") | upper %} {% set
 sundayTr = "2024-07-07" | toLocaleString(lang, { weekday: "short" }) |
 replace(".", "") | upper %}
 
-<ol role="list" class="calendar-list reel stack horizontal">
+<ol role="list" class="calendar-list reel flow horizontal">
 {% for monthData in calendar %}
 <li>
 <table class="calendar">

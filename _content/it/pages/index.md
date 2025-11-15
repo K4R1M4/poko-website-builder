@@ -5,14 +5,15 @@ uuid: 3a20a9d05a7c
 localizationKey: 306b3de99b18
 name: Home
 eleventyNavigation:
-  title: ''
-  parent: ''
+  title: ""
+  parent: ""
   order: -1
 metadata:
-  title: ''
-  description: ''
-  image: ''
+  title: ""
+  description: ""
+  image: ""
 ---
+
 <header>
   <h1>
     <img src="/_images/logo-Una_Scelta_Sosta.webp" width="300" alt="Una scelta - sosta contadina" loading="eager" />
@@ -54,7 +55,7 @@ TEXTE MODIFIÉ CF CI DESSUS
 ON GARDE LE DESSIN
 -->
 
-<section class="full-bleed-before">
+<section class="share-cta full-bleed-before flow">
   <p>Venite a condividere la nostra passione nel nostro piccolo paradiso a un'ora da Roma</p>
 </section>
 

@@ -1,17 +1,14 @@
 ---
+translationKey: table
 lang: fr
 createdAt: 2025-06-17T19:38:00.000Z
 uuid: e438db01ae48
 localizationKey: 8a8032a25c3b
 name: La table
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 4
-metadata:
-  title: ''
-  description: ''
-  image: ''
+preview:
+  image: null
 ---
 ![La table](/_images/Main-pates-ombre.webp)
 
@@ -23,6 +20,6 @@ Fort de ses 30 années d'expérience comme chef dans ses restaurants, Eric vous 
 Ce menu est disponible sur réservation.
 Si vous souhaitez quelque chose de plus simple à tout moment de la journée(snacks, en-cas, rafraîchissements), une carte de suggestions vous sera proposée. Tout sera mis à votre disposition dans l'espace cuisine.
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}
 
-{% include "galery-table.md" %}
+{% partial "galery-table.md" %}

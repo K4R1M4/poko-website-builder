@@ -1,17 +1,14 @@
 ---
+translationKey: room
 lang: it
 createdAt: 2025-06-17T19:37:00.000Z
 uuid: 4ff4cee37424
 localizationKey: 0da8ebc98cbc
 name: La camera
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 3
-metadata:
-  title: ''
-  description: ''
-  image: ''
+preview:
+  image: null
 ---
 ![La camera](/_images/Main-clefs-ombre.webp)
 
@@ -28,6 +25,6 @@ Inoltre, quando il tempo lo permette, una piscina è riservata per rinfrescarvi 
 Un secondo bagno con doccia si trova vicino alla piscina.
 La colazione per due persone è inclusa nel prezzo della camera.
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}
 
-{% include "galery-room.md" %}
+{% partial "galery-room.md" %}

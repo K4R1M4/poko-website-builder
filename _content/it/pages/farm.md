@@ -1,27 +1,24 @@
 ---
+translationKey: farm
 lang: it
 createdAt: 2025-06-17T14:49:00.000Z
 uuid: 8be05d9aa2fd
 localizationKey: bab4fe0d7566
 name: L'azienda
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 2
-metadata:
-  title: ''
-  description: ''
-  image: ''
+preview:
+  image: null
 ---
 ![L'azienda](/_images/Maison-ombre.webp)
 
 # L'Azienda
 
-![](/_images/BAE19F68-358C-466B-9059-58397E9EEEC3.webp)
+!
 
 Perduto nella campagna viterbese, nel cuore della Tuscia, terra degli Etruschi, ci si sente immediatamente rasserenati dalla calma e dalla magnifica vista che si apre sulle colline umbre vicine. È percorrendo una _strada bianca_, una di quelle strade sterrate che attraversano i campi, che si arriva a questa bella tenuta di 10 ettari coltivata secondo i principi dell’agricoltura biologica. Un vigneto di 1,5 ettari, un centinaio di ulivi, un orto, alberi da frutto e alcune arnie, una camera e la sua _table d’hôtes_ costituiscono le principali attività del luogo. Delimitata da una scogliera da cui si possono scorgere i resti di antiche abitazioni sotterranee etrusche, e dalle riserve naturali circostanti come Corviano, caratterizzata dalla sua grande biodiversità, la tenuta gode di un ambiente favorevole a un’agricoltura biologica di qualità. Inoltre, un suolo di origine vulcanica proveniente dalle terre del lago di Bolsena, formatosi dal crollo dei crateri dei monti Vulsini, conferisce alle colture fertilità ed equilibrio. È in questo angolo di paradiso che impariamo ogni giorno a comprendere meglio la natura che li circonda e cercano di valorizzare i prodotti che coltivano con rispetto e amore per il territorio che è stato loro affidato.
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Vignes.webp" alt="illustrazione vigneto" img-width="320" class-name="azienda-img-txt">
@@ -47,7 +44,7 @@ Il risultato: un olio naturale, non filtrato, ricco di vitamina E e di altri ant
 </img-txt>
 {% endrenderTemplate %}
 
-![](/_images/IMG_0164.webp)
+!
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Sapins-Arbre.webp" alt="illustrazione arbres" img-width="320" class-name="azienda-img-txt">
@@ -69,7 +66,7 @@ Con il passare delle stagioni, possiamo offrire ai nostri ospiti piatti cucinati
 </img-txt>
 {% endrenderTemplate %}
 
-![](/_images/Photo-potager-domaine.webp)
+!
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Ruches.webp" alt="illustrazione arnie" img-width="320" class-name="azienda-img-txt">
@@ -82,4 +79,4 @@ Abbiamo scelto di posizionare le arnie al centro di un terreno vicino di 80 etta
 </img-txt>
 {% endrenderTemplate %}
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}

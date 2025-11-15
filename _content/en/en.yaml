@@ -1,8 +1,10 @@
 dico:
-  address: Address
-  book: Book now
+  poweredBy: Website created by <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> and <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> from <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>
   access: Access
-  poweredBy: "Website created by <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> and <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> from <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>"
-urls:
-  contact: /en/contact/
-  booking: /en/booking/
+  book: Book now
+  address: Address
+vars:
+  poweredBy: Website created by <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> and <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> from <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>
+  access: Access
+  book: Book now
+  address: Address

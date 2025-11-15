@@ -1,17 +1,15 @@
 ---
+translationKey: farm
 lang: en
 createdAt: 2025-06-17T14:49:00.000Z
 uuid: bffbb4cc7155
 localizationKey: bab4fe0d7566
 name: The farm
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 2
-metadata:
-  title: ''
-  description: ''
-  image: ''
+preview:
+  image:
+    src: /_images/Maison-ombre.webp
 ---
 ![the farm](/_images/Maison-ombre.webp)
 
@@ -31,7 +29,7 @@ What’s more, the volcanic soil from the lands around Lake Bolsena — formed b
 
 It’s in this little corner of paradise that we learn each day to better understand the nature surrounding us, and strive to elevate the products we grow, with deep respect and love for the land we’ve been entrusted with.
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Vignes.webp" alt="Illustration vineyard" img-width="320" class-name="azienda-img-txt">
@@ -58,7 +56,7 @@ The result: a natural, unfiltered oil, rich in vitamin E and other antioxidants.
 </img-txt>
 {% endrenderTemplate %}
 
-![](/_images/IMG_0164.webp)
+!
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Sapins-Arbre.webp" alt="Illustration Orchard" img-width="320" class-name="azienda-img-txt">
@@ -82,7 +80,7 @@ As the seasons change, Eric, a chef with a deep passion for cooking, prepares di
 </img-txt>
 {% endrenderTemplate %}
 
-![](/_images/Photo-potager-domaine.webp)
+!
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Ruches.webp" alt="Illustration Beehives" img-width="320" class-name="azienda-img-txt">
@@ -95,4 +93,4 @@ We chose to place our hives in the middle of a neighboring 80-hectare plot of or
 </img-txt>
 {% endrenderTemplate %}
 
-{% include "book-btn.njk" %}
+{% partial "book-btn.njk.md" %}

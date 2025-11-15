@@ -1,13 +1,35 @@
 siteName: Una Scelta
+productionUrl: https://www.unascelta.it/
 logo: /_images/logo.webp
-metadata:
-  image: "/_images/DSC00284-1.webp"
-htmlHead: >-
+htmlHead: |-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/ctx.css">
-  <link rel="stylesheet" href="/local.css">
-lang: it
-collections:
-  - articles
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/assets/files/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/files/icons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/files/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/files/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Una Scelta" />
+  <link rel="manifest" href="/assets/files/icons/site.webmanifest" />
+languages:
+  - code: it
+    name: Italian
+    customUrlPrefix: null
+    status: published
+    isCmsDefault: false
+    isWebsiteDefault: true
+  - code: fr
+    name: Français
+    customUrlPrefix: null
+    status: published
+    isCmsDefault: false
+    isWebsiteDefault: false
+  - code: en
+    name: English
+    customUrlPrefix: null
+    status: published
+    isCmsDefault: true
+    isWebsiteDefault: false
+metadata:
+  image: /_images/DSC00284-1.webp

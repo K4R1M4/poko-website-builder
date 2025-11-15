@@ -1,34 +1,25 @@
 ---
+translationKey: table
 lang: it
 createdAt: 2025-06-17T19:38:00.000Z
 uuid: 424d271d1746
 localizationKey: 8a8032a25c3b
 name: La tavola
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 4
-metadata:
-  title: ''
-  description: ''
-  image: ''
+preview:
+  image: null
 ---
-![La tavola](/_images/Main-pates-ombre.webp)
+![La table](/_images/Main-pates-ombre.webp)
 
-# La Tavola
+# La Table
 
-![La table](/_images/DSC00291.webp)
+![La table](/_images/photo-table.webp)
 
-Forte di 30 anni di esperienza come chef nei suoi ristoranti, Eric vi propone di scoprire la sua cucina attraverso un menu preparato con i prodotti coltivati nel suo orto o selezionati presso produttori locali.
-Un menu stagionale articolato in 3 portate, adattabile in base alle vostre intolleranze alimentari.
-Vi viene proposto al prezzo di 45€ a persona.
+Fort de ses 30 années d'expérience comme chef dans ses restaurants, Eric vous propose de découvrir sa cuisine autour d'un menu réalisé à partir des produits qu'il a lui-même cultivés dans son potager ou qu'il a sélectionnés chez des producteurs de la région. Un menu de saison qui se décline en 3 services et qui peut-être adapté à vos intolérances alimentaires. Il vous est proposé au prix de 45€pp. Nos vins, ainsi quelques vins choisis, complèteront ce moment exclusif.
+Ce menu est disponible sur réservation.
+Si vous souhaitez quelque chose de plus simple à tout moment de la journée(snacks, en-cas, rafraîchissements), une carte de suggestions vous sera proposée. Tout sera mis à votre disposition dans l'espace cuisine.
 
-I nostri vini, insieme ad alcune etichette selezionate, completeranno questo momento esclusivo.
-Il menu è disponibile solo su prenotazione.
+{% partial "book-btn.njk.md" %}
 
-Se desiderate invece qualcosa di più semplice in qualsiasi momento della giornata (snack, spuntini, bevande fresche), vi sarà proposta una piccola carta di suggerimenti.
-Tutto sarà messo a vostra disposizione nello spazio cucina.
-
-{% include "book-btn.njk" %}
-
-{% include "galery-table.md" %}
+{% partial "galery-table.md" %}

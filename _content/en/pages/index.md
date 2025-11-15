@@ -5,14 +5,15 @@ uuid: 66368d48b364
 localizationKey: 306b3de99b18
 name: Home
 eleventyNavigation:
-  title: ''
-  parent: ''
+  title: ""
+  parent: ""
   order: -1
 metadata:
-  title: ''
-  description: ''
-  image: ''
+  title: ""
+  description: ""
+  image: ""
 ---
+
 <header>
   <h1>
     <img src="/_images/logo-Una_Scelta_Sosta.webp" width="300" alt="Una scelta - sosta contadina" loading="eager" />
@@ -50,7 +51,7 @@ Stays here are about connection: comfortable accommodation, heartfelt conversati
 
 A stay that’s simple, genuine, and full of life.
 
-<section class="full-bleed-before">
+<section class="share-cta full-bleed-before flow">
   <p>Just an hour from Rome — come enjoy our little slice of paradise.</p>
 </section>
 
