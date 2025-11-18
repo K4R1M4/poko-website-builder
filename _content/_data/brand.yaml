@@ -51,7 +51,7 @@ colors:
     value: '#fdfdfe'
 palettes:
   - name: main
-    text: almost-black
+    text: Graphite
     bg: almost-white
     border: ''
     outline: ''
@@ -66,7 +66,29 @@ palettes:
     fill: ''
     stroke: ''
     outline--focus: ''
-    advanced: null
+    advanced:
+      text__heading: ''
+      bg__heading: ''
+      text__a: dusty-olive
+      bg__a: ''
+      text__a--hover: dry-sage
+      bg__a--hover: ''
+      text__button: ''
+      bg__button: ''
+      text__button--hover: ''
+      bg__button--hover: ''
+      text__button--disabled: ''
+      bg__button--disabled: ''
+      icon-fill: ''
+      icon-stroke: ''
+      text__code: ''
+      bg__code: ''
+      border__code: ''
+      text__mark: ''
+      bg__mark: ''
+      border__mark: ''
+      track-color: ''
+      thumb-color: ''
 styleContexts:
   - name: main
     value: ctx
