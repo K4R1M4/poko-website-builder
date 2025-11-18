@@ -33,18 +33,22 @@ typeScales:
     minTypeScale: 1.2
     maxTypeScale: 1.25
 colors:
-  - name: almost-black
+  - name: olive-leaf
+    value: '#3a471a'
+  - name: dusty-olive
+    value: '#87855c'
+  - name: dry-sage
+    value: '#d4d1a5'
+  - name: camel
+    value: '#c09d74'
+  - name: Graphite
     value: '#333333'
+  - name: Silver
+    value: '#c9c9c9'
+  - name: Alabaster-grey
+    value: '#e7e7e7'
   - name: almost-white
     value: '#fdfdfe'
-  - name: olive
-    value: '#87855c'
-  - name: olive-dark
-    value: '#3a471a'
-  - name: olive-light
-    value: '#d4d1a5'
-  - name: mustard
-    value: '#c09d74'
 palettes:
   - name: main
     text: almost-black
