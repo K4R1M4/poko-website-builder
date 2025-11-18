@@ -128,6 +128,23 @@ palettes:
       border__mark: ''
       track-color: ''
       thumb-color: ''
+  - name: Camel
+    text: camel
+    bg: almost-white
+    border: ''
+    outline: ''
+    text-decoration: ''
+    text--marker: ''
+    text-emphasis: ''
+    text--selection: ''
+    bg--selection: ''
+    shadow: ''
+    caret: ''
+    column-rule: ''
+    fill: ''
+    stroke: ''
+    outline--focus: ''
+    advanced: null
 styleContexts:
   - name: main
     value: ctx
