@@ -1,6 +1,7 @@
 import path from "node:path";
 import fglob from "fast-glob";
 // import deepmerge from "deepmerge";
+import { DEBUG } from "../../../../env.config.js";
 
 export default async function (eleventyConfig, pluginOptions) {
   eleventyConfig.versionCheck(">=3.0.0-alpha.1");
@@ -48,7 +49,9 @@ export default async function (eleventyConfig, pluginOptions) {
         });
     }
 
-    console.warn(`Partial "${filename}" not found in "${dirs}"`);
+    if (DEBUG) {
+      console.warn(`Partial "${filename}" not found in "${dirs}"`);
+    }
 
     return "";
   }
