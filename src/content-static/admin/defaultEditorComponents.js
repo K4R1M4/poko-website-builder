@@ -1,4 +1,4 @@
-export const wrapperBis = {
+const wrapperBis = {
   id: "wrapperBis",
   label: "Wrapper Bis",
   icon: "lunch_dining",

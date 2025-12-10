@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
         export default function() {
           const currentCollections = JSON.stringify(this.env.globalSettings.collections)
           return `
-const currentCollections = JSON.parse('${currentCollections}')
+const currentCollections = JSON.parse('${currentCollections || "[]"}')
 `;
         }
     </template>
