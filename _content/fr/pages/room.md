@@ -7,24 +7,17 @@ localizationKey: 0da8ebc98cbc
 name: La chambre
 eleventyNavigation:
   order: 3
-preview:
-  image: null
 ---
-![La camera](/_images/Main-clefs-ombre.webp)
+{% image src="/_images/Main-clefs-ombre.webp", alt="La chambre", loading="eager" %}
 
-# La Camera
+# La chambre
 
-![La camera](/_images/Photo-chambre.webp)
+{% image src="/_images/Photo-chambre.webp", alt="La chambre" %}
 
-Soggiornerete in un alloggio accogliente adiacente alla nostra cantina.
-Progettato per 2 a 4 persone, offre uno spazio confortevole che comprende una camera con letto matrimoniale, un bagno privato con doccia, articoli da toeletta gratuiti e un asciugacapelli, oltre a un soggiorno con divano letto per due persone.
-Potrete inoltre usufruire di una piacevole terrazza.
-La camera è dotata di aria condizionata e connessione Wi-Fi. Asciugamani e biancheria da letto sono forniti.
-È disponibile anche una cucina indipendente a vostra disposizione.
-Inoltre, quando il tempo lo permette, una piscina è riservata per rinfrescarvi e rilassarvi.
-Un secondo bagno con doccia si trova vicino alla piscina.
-La colazione per due persone è inclusa nel prezzo della camera.
+Vous séjournerez dans un logement chaleureux attenant à notre cantina.
 
-{% partial "book-btn.njk.md" %}
+Prévu pour 2 à 4 personnes, il offre un espace confortable comprenant une chambre avec un lit double, une salle de bain privative avec douche ainsi que des articles de toilette gratuits et un sèche cheveux et un espace salon avec un canapé convertible pour deux personnes. Vous pourrez également profiter d'une agréable terrasse. La chambre est équipée de l'air conditionné et d'une connection wifi. Des serviettes et du linge de lit sont fournis. Un espace cuisine indépendant est aussi mis à votre disposition. De plus, lorsque le temps le permet, une piscine vous est réservée afin de vous rafraîchir et vous détendre. Une seconde salle de bain avec douche est située près de la piscine. Un petit déjeuner pour deux personnes est compris dans le prix de la chambre.
 
-{% partial "galery-room.md" %}
+{% htmlPartial "book-btn.njk" %}
+
+{% partial "gallery-room.md" %}

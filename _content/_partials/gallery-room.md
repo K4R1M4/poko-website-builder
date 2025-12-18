@@ -1,0 +1,1 @@
+{% component "gallery5.njk", { images: {"image1":"/_images/Photos-galerie-chambre-1.webp","image2":"/_images/Photos-galerie-chambre-2.webp","image3":"/_images/Photos-galerie-chambre-4.webp","image4":"/_images/Photos-galerie-chambre-3.webp","image5":"/_images/Photos-galerie-chambre-5.webp"} } %}

@@ -1,0 +1,1 @@
+{% component "gallery5.njk", { images: {"image1":"/_images/Photo-table-galerie-1.webp","image2":"/_images/Photo-table-galerie-2.webp","image3":"/_images/Photo-table-galerie-4.webp","image4":"/_images/Photo-table-galerie-3.webp","image5":"/_images/Photo-table-galerie-5.webp"} } %}

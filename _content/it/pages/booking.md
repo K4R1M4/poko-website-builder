@@ -1,24 +1,19 @@
 ---
+translationKey: booking
 lang: it
 createdAt: 2025-06-17T19:40:00.000Z
 uuid: 126b5ac33d91
 localizationKey: 056629ecb78c
 name: Prenotazione
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 6
-metadata:
-  title: ''
-  description: ''
-  image: ''
 ---
-![Prenotazione](/_images/Main-clefs-ombre.webp)
+{% image src="/_images/Main-clefs-ombre.webp", alt="Prenotazione", loading="eager" %}
 
 # Prenotazione
 
-Le richieste di prenotazione devono essere inviate via e-mail a {{ data.email | emailLink }}.  
-Le disponibilità possono essere consultate nel calendario qui sotto.  
+Le richieste di prenotazione devono essere inviate via e-mail a {{ data.email | emailLink }}.
+Le disponibilità possono essere consultate nel calendario qui sotto.
 Il prezzo della camera è di 165€, colazione per 2 persone inclusa (+10€ per ogni persona aggiuntiva).
 
 ## Condizioni di soggiorno.
@@ -40,10 +35,12 @@ Non dimenticate di informarci di eventuali intolleranze o allergie alimentari.
   <h2>Calendario</h2>
   <p class="callout">Questo calendario mostra le disponibilità attuali. Le prenotazioni sono confermate via email.</p>
 
-{% include "calendar.njk" %}
+{% htmlPartial "calendar.njk" %}
 
 </section>
 
 <section class="center intrinsic">
   {{ data.email | emailLink({ text: "Prenota per e-mail", subject: "Prenotazione - Una Scelta", class: "btn book" }) }}
 </section>
+
+{% htmlPartial "calendar-css.njk" %}

@@ -10,9 +10,8 @@ metadata:
   description: ""
   image: ""
 ---
-
-![Livre d'or](/_images/Terrasse.webp)
+{% image src="/_images/Terrasse.webp", alt="Livre d'or", loading="eager" %}
 
 # Livre d'or
 
-![Ombre](/_images/Ombre.webp)
+{% image src="/_images/Ombre.webp", alt="Ombre" %}

@@ -8,13 +8,14 @@ name: Le domaine
 eleventyNavigation:
   order: 2
 preview:
-  image: null
+  image:
+    src: /_images/Maison-ombre.webp
 ---
-![Le domaine](/_images/Maison-ombre.webp)
+{% image src="/_images/Maison-ombre.webp", alt="Le domaine", loading="eager" %}
 
 # Le Domaine
 
-!
+{% image src="/_images/BAE19F68-358C-466B-9059-58397E9EEEC3.webp" %}
 
 Perdu dans la campagne viterbese, au coeur de la Tuscia, territoire des étrusques, on se sent immédiatement apaisé par le calme et la magnifique vue donnant sur les collines ombriennes voisines.
 C'est en empruntant _"una strada bianca"_, une de ces routes caillouteuses non asphaltées qui traverse les champs, que l'on parvient à rejoindre ce joli domaine de 10ha en agriculture biologique.
@@ -22,7 +23,7 @@ Un vignoble d'1,5 ha, une centaine d'oliviers, un potager, des arbres fruitiers 
 Délimité par une falaise, d'où l'on peut apercevoir les vestiges d'anciennes habitations souterraines étrusques et par les réserves naturelles environnantes telles que celle de _Corviano_, caractérisée par sa grande biodiversité, le domaine bénéficie d'un environnement propice à une agriculture biologique de qualité. De plus, un terroir volcanique provenant des terres du Lac de Bolsena, formé par l'effondrement de cratères _des Monts Vulsini_, apporte aux cultures fertilité et équilibre.
 C'est dans ce petit coin de paradis, que nous apprenons chaque jour à mieux comprendre la nature qui les entoure et tentent de sublimer les produits qu'ils cultivent dans le respect et l'amour du terroir qui leur est confié.
 
-{% partial "book-btn.njk.md" %}
+{% htmlPartial "book-btn.njk" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Vignes.webp" alt="Illustration vignoble" img-width="320" class-name="azienda-img-txt">
@@ -44,7 +45,7 @@ Nous avons réalisé notre première cuvée en 2024 : des vins sains, issus de l
 </img-txt>
 {% endrenderTemplate %}
 
-!
+{% image src="/_images/IMG_0164.webp" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Sapins-Arbre.webp" alt="Illustration sapins" img-width="320" class-name="azienda-img-txt">
@@ -64,7 +65,7 @@ Nous cultivons nos propres légumes et plantes aromatiques dans notre serre et n
 </img-txt>
 {% endrenderTemplate %}
 
-!
+{% image src="/_images/Photo-potager-domaine.webp" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Ruches.webp" alt="Illustration ruches" img-width="320" class-name="azienda-img-txt">
@@ -75,4 +76,4 @@ L'azienda possède 10 familles d'abeilles. Nous produisons notre propre miele mi
 </img-txt>
 {% endrenderTemplate %}
 
-{% partial "book-btn.njk.md" %}
+{% htmlPartial "book-btn.njk" %}

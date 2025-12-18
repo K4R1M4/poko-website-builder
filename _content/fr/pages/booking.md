@@ -1,24 +1,19 @@
 ---
+translationKey: booking
 lang: fr
 createdAt: 2025-06-17T19:40:00.000Z
 uuid: 1c57dca44576
 localizationKey: 056629ecb78c
 name: Réservation
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 6
-metadata:
-  title: ''
-  description: ''
-  image: ''
 ---
-![Réservation](/_images/Main-clefs-ombre.webp)
+{% image src="/_images/Main-clefs-ombre.webp", alt="Réservation", loading="eager" %}
 
 # Réservation
 
-Les demandes de réservation sont à envoyer par mail à {{ data.email | emailLink }}.  
-Les disponibilités peuvent être consultées sur le calendrier ci-dessous.  
+Les demandes de réservation sont à envoyer par mail à {{ data.email | emailLink }}.
+Les disponibilités peuvent être consultées sur le calendrier ci-dessous.
 Le prix de la chambre est de 165€, petit-déjeuner pour 2 personnes inclus (+10€ par personne supplémentaire).
 
 ## Conditions de séjour
@@ -41,10 +36,12 @@ N'oubliez pas de nous informer de vos éventuelles intolérances ou allergies al
   <h2>Calendrier</h2>
   <p class="callout">Ce calendrier présente les disponibilités actuelles. Les réservations sont confirmées par e-mail.</p>
 
-{% include "calendar.njk" %}
+{% htmlPartial "calendar.njk" %}
 
 </section>
 
 <section class="center intrinsic">
   {{ data.email | emailLink({ text: "Réserver par e-mail", subject: "Réservation - Una Scelta", class: "btn book" }) }}
 </section>
+
+{% htmlPartial "calendar-css.njk" %}

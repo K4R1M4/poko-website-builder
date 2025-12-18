@@ -10,9 +10,8 @@ metadata:
   description: ""
   image: ""
 ---
-
-![Libro degli ospiti](/_images/Terrasse.webp)
+{% image src="/_images/Terrasse.webp", alt="Libro degli ospiti", loading="eager" %}
 
 # Libro degli ospiti
 
-![Ombre](/_images/Ombre.webp)
+{% image src="/_images/Ombre.webp", alt="Ombre" %}

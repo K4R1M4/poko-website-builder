@@ -1,0 +1,66 @@
+<header>
+  <h1>
+    <img src="/_images/logo-Una_Scelta_Sosta.webp" width="300" alt="Una scelta - sosta contadina" loading="eager" />
+  </h1>
+</header>
+
+<section class="home-links">
+  <ul role="list" class="switcher">
+    <li class="breakout-clickable">
+      <img src="/_images/Maison-ombre.webp" alt="{{ vars.farmPageName }}" width="150" loading="eager" />
+      <p class="h4"><a href="{{ 'farm' | locale_url }}" class="clickable">{{ vars.farmPageName }}</a></p>
+    </li>
+    <li class="breakout-clickable">
+      <img src="/_images/Main-clefs-ombre.webp" alt="{{ vars.roomPageName }}" width="150" loading="eager" />
+      <p class="h4"><a href="{{ 'room' | locale_url }}" class="clickable">{{ vars.roomPageName }}</a></p>
+    </li>
+    <li class="breakout-clickable">
+      <img src="/_images/Main-pates-ombre.webp" alt="{{ vars.tablePageName }}" width="150" loading="eager" />
+      <p class="h4"><a href="{{ 'table' | locale_url }}" class="clickable">{{ vars.tablePageName }}</a></p>
+    </li>
+  </ul>
+</section>
+
+{% css %}
+
+/* Home header */
+main > header img,
+main > header picture {
+    max-width: 300px;
+    margin-inline: auto;
+}
+/* Home links */
+.home-links {
+    --width-wrap: 19rem;
+}
+.home-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.home-links li a {
+    text-decoration: none;
+    color: inherit;
+}
+.home-links picture,
+.home-links img {
+    max-width: 150px;
+    margin-inline: auto;
+}
+.home-links li a:hover {
+    color: #87855c;
+}
+.home-links li:has(a:hover) img,
+.home-links li:has(a:hover) picture {
+    /* filter: sepia(1) hue-rotate(57.21deg) saturate(45) contrast(1)
+    brightness(0.45); */
+    filter: invert(20%);
+}
+@media (max-width: 400px) {
+    .home-links li a {
+        font-size: var(--step-0);
+    }
+}
+
+{% endcss %}

@@ -11,11 +11,11 @@ preview:
   image:
     src: /_images/Maison-ombre.webp
 ---
-![the farm](/_images/Maison-ombre.webp)
+{% image src="/_images/Maison-ombre.webp", alt="The farm", loading="eager" %}
 
 # The Farm
 
-![The farm-photo](/_images/BAE19F68-358C-466B-9059-58397E9EEEC3.webp)
+{% image src="/_images/BAE19F68-358C-466B-9059-58397E9EEEC3.webp" %}
 
 Lost in the Viterbo countryside, in the heart of Tuscia — the land of the Etruscans — one immediately feels soothed by the calm and the magnificent view over the nearby Umbrian hills.
 
@@ -29,7 +29,7 @@ What’s more, the volcanic soil from the lands around Lake Bolsena — formed b
 
 It’s in this little corner of paradise that we learn each day to better understand the nature surrounding us, and strive to elevate the products we grow, with deep respect and love for the land we’ve been entrusted with.
 
-{% partial "book-btn.njk.md" %}
+{% htmlPartial "book-btn.njk" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Vignes.webp" alt="Illustration vineyard" img-width="320" class-name="azienda-img-txt">
@@ -56,7 +56,7 @@ The result: a natural, unfiltered oil, rich in vitamin E and other antioxidants.
 </img-txt>
 {% endrenderTemplate %}
 
-!
+{% image src="/_images/IMG_0164.webp" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Sapins-Arbre.webp" alt="Illustration Orchard" img-width="320" class-name="azienda-img-txt">
@@ -80,7 +80,7 @@ As the seasons change, Eric, a chef with a deep passion for cooking, prepares di
 </img-txt>
 {% endrenderTemplate %}
 
-!
+{% image src="/_images/Photo-potager-domaine.webp" %}
 
 {% renderTemplate "webc" %}
 <img-txt src="/_images/Ruches.webp" alt="Illustration Beehives" img-width="320" class-name="azienda-img-txt">
@@ -93,4 +93,4 @@ We chose to place our hives in the middle of a neighboring 80-hectare plot of or
 </img-txt>
 {% endrenderTemplate %}
 
-{% partial "book-btn.njk.md" %}
+{% htmlPartial "book-btn.njk" %}

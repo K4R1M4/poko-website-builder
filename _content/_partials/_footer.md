@@ -1,4 +1,4 @@
-<footer class="full-bleed-before flow" style="--flow-space: 1em;">
+<footer class="bleed-bg palette-dry-sage flow" style="--flow-space: 1em;">
     <div class="infos grid-fluid">
     <div>
         <p>

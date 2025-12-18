@@ -7,3 +7,5 @@ localizationKey: 1fd5c5c9d702
 name: Galleria
 ---
 # Galleria
+
+{% htmlPartial "gallery-full.njk" %}

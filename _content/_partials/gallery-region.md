@@ -1,0 +1,1 @@
+{% component "gallery5.njk", { images: {"image1":"/_images/Photo-galerie-region4.webp","image2":"/_images/Photo-galerie-region5.webp","image3":"/_images/IMG_0700.webp","image4":"/_images/IMG_2856.webp","image5":"/_images/IMG_0713.webp"} } %}

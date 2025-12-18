@@ -13,8 +13,7 @@ metadata:
   description: ""
   image: ""
 ---
-
-![Contact](/_images/Eric-et-Karima-ombre.webp)
+{% image src="/_images/Eric-et-Karima-ombre.webp", alt="Contact", loading="eager" %}
 
 # Contact
 

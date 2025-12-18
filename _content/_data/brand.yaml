@@ -31,7 +31,10 @@ typeScales:
     minFontSize: 18
     maxFontSize: 20
     minTypeScale: 1.2
-    maxTypeScale: 1.25
+    maxTypeScale: 1.33
+    customSteps:
+      - startStep: '0'
+        endStep: '2'
 colors:
   - name: olive-leaf
     value: '#3a471a'
@@ -43,6 +46,8 @@ colors:
     value: '#c09d74'
   - name: Graphite
     value: '#333333'
+  - name: full-black
+    value: '#000000'
   - name: Silver
     value: '#c9c9c9'
   - name: Alabaster-grey
@@ -53,10 +58,12 @@ palettes:
   - name: main
     text: Graphite
     bg: almost-white
-    border: ''
+    strong:
+      text__strong: full-black
+    advanced:
+      text__a: dusty-olive
+      text__a--hover: dry-sage
     outline: ''
-    text-decoration: ''
-    text--marker: ''
     text-emphasis: ''
     text--selection: ''
     bg--selection: olive-dark
@@ -66,36 +73,13 @@ palettes:
     fill: ''
     stroke: ''
     outline--focus: ''
-    advanced:
-      text__heading: ''
-      bg__heading: ''
-      text__a: dusty-olive
-      bg__a: ''
-      text__a--hover: dry-sage
-      bg__a--hover: ''
-      text__button: ''
-      bg__button: ''
-      text__button--hover: ''
-      bg__button--hover: ''
-      text__button--disabled: ''
-      bg__button--disabled: ''
-      icon-fill: ''
-      icon-stroke: ''
-      text__code: ''
-      bg__code: ''
-      border__code: ''
-      text__mark: ''
-      bg__mark: ''
-      border__mark: ''
-      track-color: ''
-      thumb-color: ''
   - name: dry-sage
     text: olive-leaf
     bg: dry-sage
-    border: ''
+    advanced:
+      text__a: olive-leaf
+      text__a--hover: dusty-olive
     outline: ''
-    text-decoration: ''
-    text--marker: ''
     text-emphasis: ''
     text--selection: ''
     bg--selection: ''
@@ -105,36 +89,10 @@ palettes:
     fill: ''
     stroke: ''
     outline--focus: ''
-    advanced:
-      text__heading: ''
-      bg__heading: ''
-      text__a: olive-leaf
-      bg__a: ''
-      text__a--hover: dusty-olive
-      bg__a--hover: ''
-      text__button: ''
-      bg__button: ''
-      text__button--hover: ''
-      bg__button--hover: ''
-      text__button--disabled: ''
-      bg__button--disabled: ''
-      icon-fill: ''
-      icon-stroke: ''
-      text__code: ''
-      bg__code: ''
-      border__code: ''
-      text__mark: ''
-      bg__mark: ''
-      border__mark: ''
-      track-color: ''
-      thumb-color: ''
   - name: Camel
     text: camel
     bg: almost-white
-    border: ''
     outline: ''
-    text-decoration: ''
-    text--marker: ''
     text-emphasis: ''
     text--selection: ''
     bg--selection: ''
@@ -144,7 +102,6 @@ palettes:
     fill: ''
     stroke: ''
     outline--focus: ''
-    advanced: null
 styleContexts:
   - name: main
     value: ctx

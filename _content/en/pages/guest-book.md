@@ -10,9 +10,8 @@ metadata:
   description: ""
   image: ""
 ---
-
-![Guest book](/_images/Terrasse.webp)
+{% image src="/_images/Terrasse.webp", alt="Guest book", loading="eager" %}
 
 # Guest book
 
-![Ombre](/_images/Ombre.webp)
+{% image src="/_images/Ombre.webp", alt="Ombre" %}

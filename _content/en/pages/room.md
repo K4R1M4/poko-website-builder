@@ -11,11 +11,11 @@ preview:
   image:
     src: /_images/Main-clefs-ombre.webp
 ---
-![The room](/_images/Main-clefs-ombre.webp)
+{% image src="/_images/Main-clefs-ombre.webp", alt="The room", loading="eager" %}
 
 # The Room
 
-!
+{% image src="/_images/Photo-chambre.webp", alt="The room" %}
 
 You'll stay in a cozy guesthouse adjoining our cantina. Designed for 2 to 4 guests, it offers a comfortable space with a bedroom featuring a double bed, a private bathroom with a shower, complimentary toiletries, and a hairdryer. The living area includes a sofa bed that sleeps two.
 
@@ -25,6 +25,6 @@ When the weather is kind, a swimming pool is reserved for your enjoyment—perfe
 
 Breakfast for two is included in the room rate.
 
-{% partial "book-btn.njk.md" %}
+{% htmlPartial "book-btn.njk" %}
 
-{% partial "galery-room.md" %}
+{% partial "gallery-room.md" %}

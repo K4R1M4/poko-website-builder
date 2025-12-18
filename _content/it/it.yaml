@@ -1,10 +1,13 @@
-dico:
-  poweredBy: Sito creato da <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> e <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> di <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>
-  access: Accesso
-  book: Prenota
-  address: Indirizzo
 vars:
   poweredBy: Sito creato da <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> e <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> di <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>
   access: Accesso
   book: Prenota
   address: Indirizzo
+  farmPageName: L'azienda
+  roomPageName: La camera
+  tablePageName: La tavola
+dico:
+  address: Indirizzo
+  book: Prenota
+  access: Accesso
+  poweredBy: Sito creato da <a href='https://www.m4rr.co/' rel='noopener noreferrer'>m4rrc0</a> e <a href='https://www.tess-h.be' rel='noopener noreferrer'>Tess h.</a> di <a href='https://www.mookai.be/' rel='noopener noreferrer'>mookaï asbl</a>

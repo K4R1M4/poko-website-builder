@@ -13,8 +13,7 @@ metadata:
   description: ""
   image: ""
 ---
-
-![Chi siamo](/_images/Eric-et-Karima-ombre.webp)
+{% image src="/_images/Eric-et-Karima-ombre.webp", alt="Chi siamo", loading="eager" %}
 
 # Chi siamo
 

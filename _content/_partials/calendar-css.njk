@@ -1,0 +1,62 @@
+{% css %}
+
+/* Booking calendar */
+ol.calendar-list {
+    --_list-items-padding: 1rem;
+    max-width: 100%;
+    /* gap: 1rem; */
+    /* justify-content: center; */
+    padding: 1rem;
+    align-items: stretch;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--_list-items-padding);
+}
+
+.calendar-list > li {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: var(--_list-items-padding);
+    scroll-snap-align: start;
+}
+
+table.calendar thead {
+    /* color: #d4d1a5; */
+    color: #c09d74;
+    border-block-start: 1px solid currentColor;
+}
+
+table.calendar th {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+table.calendar th,
+table.calendar td {
+    padding: 0.5rem 0.3rem;
+    text-align: center;
+}
+
+/* Caption styling - month and year */
+table.calendar caption {
+    padding: 1rem 0.3rem;
+    text-align: right;
+}
+
+table.calendar td[data-booked="true"] {
+    color: #d8d8d8;
+    position: relative;
+}
+table.calendar td[data-booked="true"]::after,
+table.calendar td[data-booked="true"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: #d8d8d8;
+}
+table.calendar td[data-booked="true"]::before {
+    transform: rotate(-45deg);
+}
+
+{% endcss %}

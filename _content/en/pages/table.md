@@ -11,11 +11,11 @@ preview:
   image:
     src: /_images/Main-pates-ombre.webp
 ---
-![The table](/_images/Main-pates-ombre.webp)
+{% image src="/_images/Main-pates-ombre.webp", alt="The table", loading="eager" %}
 
 # The Table
 
-!
+{% image src="/_images/photo-table.webp", alt="The table" %}
 
 With 30 years of experience as a chef running his own restaurant, Eric invites you to discover his cuisine through a seasonal menu crafted from ingredients he grows in his garden or carefully sources from local producers. The three-course menu, priced at €45 per person, can be adapted to accommodate dietary intolerances.
 
@@ -23,6 +23,6 @@ Our selection of house wines, complemented by a few hand-picked bottles, rounds 
 
 If you prefer something lighter at any time of day—snacks, small bites, or refreshments—a modest selection will be available. Everything you need will be provided in the kitchen area.
 
-{% partial "book-btn.njk.md" %}
+{% partial "book-btn.njk" %}
 
-{% partial "galery-table.md" %}
+{% partial "gallery-table.md" %}

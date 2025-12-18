@@ -1,24 +1,19 @@
 ---
+translationKey: booking
 lang: en
 createdAt: 2025-06-17T19:40:00.000Z
 uuid: 2b0666b0cc22
 localizationKey: 056629ecb78c
 name: Booking
 eleventyNavigation:
-  title: ''
-  parent: ''
   order: 6
-metadata:
-  title: ''
-  description: ''
-  image: null
 ---
-![Booking](/_images/Main-clefs-ombre.webp)
+{% image src="/_images/Main-clefs-ombre.webp", alt="Booking", loading="eager" %}
 
 # Booking
 
-Booking requests should be sent by email to {{ data.email | emailLink }}.  
-Availability can be checked on the calendar below.  
+Booking requests should be sent by email to {{ data.email | emailLink }}.
+Availability can be checked on the calendar below.
 The room rate is €165, including breakfast for 2 people (+€10 per additional person).
 
 ## Stay Conditions
@@ -37,10 +32,12 @@ Don’t forget to let us know about any food intolerances or allergies.
   <h2>Calendar</h2>
   <p class="callout">This calendar shows the current availability. Reservations are confirmed by email.</p>
 
-{% include "calendar.njk" %}
+{% htmlPartial "calendar.njk" %}
 
 </section>
 
 <section class="center intrinsic">
   {{ data.email | emailLink({ text: "Book by email", subject: "Booking - Una Scelta", class: "btn book" }) }}
 </section>
+
+{% htmlPartial "calendar-css.njk" %}
