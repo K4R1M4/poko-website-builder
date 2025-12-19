@@ -8,9 +8,7 @@
             id="modal-image-{{ loop.index }}"
             style="--thumbnail-url: url({{ thumbnail.webp[0].url }})"
         >
-            <picture role="tabpanel" aria-label="Image {{ loop.index }}">
-                <img src="/{{ imagePath }}" alt="" width="800" />
-            </picture>
+            {% image src="/" + imagePath, imgAttributes={'aria-label': 'Image ' + loop.index} %}
         </div>
         {% endfor %}
         <button class="scroll-button left" aria-label="Scroll Left" onclick="carousel.scrollBy({left: carousel.offsetWidth * -0.8})"></button>
@@ -23,16 +21,16 @@
 
 <ul role="list" class="gallery-full-masonry">
     {% for imagePath in "_images/gallery/**" | glob %}
-    {% set imgStats = imagePath | image({ widths: [300, 'auto'] }) %}
-    {% set img300 = imgStats.webp[0].url %}
-    {% set imgAuto = imgStats.webp[1].url %}
+    {% set imgStats = imagePath | image({ widths: ['auto'] }) %}
+    {% set imgAuto = imgStats.webp[0].url %}
     <li>
         <a
             href="{{ imgAuto }}"
             class="preview-img-link"
             data-modal-image-id="modal-image-{{ loop.index }}"
-            ><img src="{{ img300 }}" alt="" width="300" eleventy:ignore
-        /></a>
+            >
+                {% image src="/" + imagePath, width="300" %}
+        </a>
     </li>
     {% endfor %}
 </ul>
@@ -60,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
 {% endjs %}
 
 {% css %}
@@ -71,6 +68,7 @@ dialog {
     --marker-group-margin-block: var(--step-1);
     --scroll-btn-proportions: var(--step-3);
     --bg-clr: #ffffff90;
+    --carousel-btn-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
     position: fixed;
     inset: var(--step--2);
@@ -104,43 +102,6 @@ dialog::backdrop {
     scrollbar-color: currentColor var(--color-bg);
     scrollbar-width: none;
     scroll-marker-group: after;
-
-    &::scroll-button(*) {
-        position: absolute;
-        position-anchor: --carousel;
-
-        width: var(--scroll-btn-proportions);
-        height: var(--scroll-btn-proportions);
-        border: 0;
-        border-right: 2px solid currentColor;
-        border-top: 2px solid currentColor;
-        margin: var(--dialog-padding);
-    }
-
-    &::scroll-button(inline-start) {
-        content: "" / "Scroll Left";
-        position-area: span-inline-end center;
-        /* transform: rotate(-135deg); */
-
-        background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 6l-6 6 6 6' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
-        border: none;
-        border-radius: 100%;
-    }
-    &::scroll-button(inline-start):disabled {
-        background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 6l-6 6 6 6' fill='none' stroke='%2333333340' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
-    }
-    &::scroll-button(inline-end) {
-        content: "" / "Scroll Right";
-        position-area: span-inline-start center;
-        /* transform: rotate(45deg); */
-
-        background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
-        border: none;
-        border-radius: 100%;
-    }
-    &::scroll-button(inline-end):disabled {
-        background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%2333333340' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
-    }
 
     &::scroll-marker-group {
         display: flex;
@@ -178,15 +139,45 @@ dialog::backdrop {
 } /* End of .carousel */
 
 /* Scroll buttons */
-.carousel .scroll-button {
-    display: none;
-    margin: 0;
-    border: none;
-    border-radius: 100%;
+.carousel::scroll-button(*) {
+    position: absolute;
     width: var(--scroll-btn-proportions);
     height: var(--scroll-btn-proportions);
-
+    box-shadow: var(--carousel-btn-shadow);
+    border: none;
+    border-radius: 100%;
+}
+.carousel::scroll-button(*) {
+    position-anchor: --carousel;
+    margin: var(--dialog-padding);
+}
+.carousel::scroll-button(inline-start) {
+    content: "" / "Scroll Left";
+    position-area: span-inline-end center;
+    background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 6l-6 6 6 6' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
+}
+.carousel::scroll-button(inline-start):disabled {
+    background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 6l-6 6 6 6' fill='none' stroke='%2333333340' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
+}
+.carousel::scroll-button(inline-end) {
+    content: "" / "Scroll Right";
+    position-area: span-inline-start center;
+    background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
+}
+.carousel::scroll-button(inline-end):disabled {
+    background: var(--bg-clr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%2333333340' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/50% no-repeat;
+}
+.carousel .scroll-button {
+    /* ??? For some reason, I cannot group this with '.carousel::scroll-button(*)' above...? */
     position: absolute;
+    width: var(--scroll-btn-proportions);
+    height: var(--scroll-btn-proportions);
+    box-shadow: var(--carousel-btn-shadow);
+    border: none;
+    border-radius: 100%;
+    /* End of group */
+    display: none;
+    margin: 0;
     bottom: 50%;
     &.left {
         left: var(--dialog-padding);
@@ -243,6 +234,7 @@ dialog::backdrop {
   height: var(--scroll-btn-proportions);
   border-radius: 100%;
   background-color: var(--bg-clr);
+  box-shadow: var(--carousel-btn-shadow);
 }
 .form-close > button::before, .form-close > button::after {
   position: absolute;

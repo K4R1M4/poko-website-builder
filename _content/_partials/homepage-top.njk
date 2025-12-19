@@ -1,21 +1,21 @@
 <header>
   <h1>
-    <img src="/_images/logo-Una_Scelta_Sosta.webp" width="300" alt="Una scelta - sosta contadina" loading="eager" />
+    {% image src="/_images/logo-Una_Scelta_Sosta.webp", width="300", alt="Una scelta - sosta contadina", loading="eager" %}
   </h1>
 </header>
 
 <section class="home-links">
   <ul role="list" class="switcher">
     <li class="breakout-clickable">
-      <img src="/_images/Maison-ombre.webp" alt="{{ vars.farmPageName }}" width="150" loading="eager" />
+      {% image src="/_images/Maison-ombre.webp", alt=vars.farmPageName, width="150", loading="eager" %}
       <p class="h4"><a href="{{ 'farm' | locale_url }}" class="clickable">{{ vars.farmPageName }}</a></p>
     </li>
     <li class="breakout-clickable">
-      <img src="/_images/Main-clefs-ombre.webp" alt="{{ vars.roomPageName }}" width="150" loading="eager" />
+      {% image src="/_images/Main-clefs-ombre.webp", alt=vars.roomPageName, width="150", loading="eager" %}
       <p class="h4"><a href="{{ 'room' | locale_url }}" class="clickable">{{ vars.roomPageName }}</a></p>
     </li>
     <li class="breakout-clickable">
-      <img src="/_images/Main-pates-ombre.webp" alt="{{ vars.tablePageName }}" width="150" loading="eager" />
+      {% image src="/_images/Main-pates-ombre.webp", alt=vars.tablePageName, width="150", loading="eager" %}
       <p class="h4"><a href="{{ 'table' | locale_url }}" class="clickable">{{ vars.tablePageName }}</a></p>
     </li>
   </ul>
