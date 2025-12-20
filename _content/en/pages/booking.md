@@ -6,7 +6,7 @@ uuid: 2b0666b0cc22
 localizationKey: 056629ecb78c
 name: Booking
 eleventyNavigation:
-  order: 6
+  order: 7
 ---
 {% image src="/_images/Main-clefs-ombre.webp", alt="Booking", loading="eager" %}
 

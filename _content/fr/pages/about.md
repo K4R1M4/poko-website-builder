@@ -1,17 +1,12 @@
 ---
+translationKey: about
 lang: fr
 createdAt: 2025-06-17T19:41:00.000Z
 uuid: 7caf75ba546a
 localizationKey: 2b9f85706714
 name: À propos
 eleventyNavigation:
-  title: ""
-  parent: ""
-  order: 7
-metadata:
-  title: ""
-  description: ""
-  image: ""
+  order: 8
 ---
 {% image src="/_images/Eric-et-Karima-ombre.webp", alt="À propos", loading="eager" %}
 

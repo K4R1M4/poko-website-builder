@@ -4,7 +4,7 @@ try {
   envConfig = await import("../../env.config.js");
 } catch (error) {
   console.warn(
-    `WARN: Failed to load environment configuration from user's "_config/index.js". Falling back to process.env`
+    `WARN: Failed to load environment configuration from user's "_config/index.js". Falling back to process.env`,
   );
   envConfig = process?.env || {};
 }
@@ -45,6 +45,27 @@ const calendarSingleton = {
   ],
 };
 
+const fullGalleryImagesSingleton = {
+  // icon: "date_range",
+  name: "fullGalleryImages",
+  label: "Gallery Images",
+  editor: { preview: false },
+  i18n: false,
+  file: `${CONTENT_DIR}/_data/fullGalleryImages.yaml`,
+  media_folder: `/${CONTENT_DIR}/_images/gallery`,
+  public_folder: "/_images/gallery",
+  fields: [
+    {
+      label: "Notice",
+      name: "notice",
+      widget: "boolean",
+      default: false,
+      readonly: true,
+      before_input: `See the [dedicated assets directory](/admin/#/assets/_content/_images/gallery) to manage gallery images.`,
+    },
+  ],
+};
+
 export const collections = [];
 
-export const singletons = [calendarSingleton];
+export const singletons = [calendarSingleton, fullGalleryImagesSingleton];

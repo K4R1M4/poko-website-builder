@@ -1,17 +1,12 @@
 ---
+translationKey: about
 lang: en
 createdAt: 2025-06-17T19:41:00.000Z
 uuid: 5a90b273c70d
 localizationKey: 2b9f85706714
 name: About us
 eleventyNavigation:
-  title: ''
-  parent: ''
-  order: 7
-metadata:
-  title: ''
-  description: ''
-  image: ''
+  order: 8
 ---
 {% image src="/_images/Eric-et-Karima-ombre.webp", alt="About us", loading="eager" %}
 

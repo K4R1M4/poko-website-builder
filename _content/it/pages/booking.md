@@ -6,7 +6,8 @@ uuid: 126b5ac33d91
 localizationKey: 056629ecb78c
 name: Prenotazione
 eleventyNavigation:
-  order: 6
+  order: 7
+vars: {}
 ---
 {% image src="/_images/Main-clefs-ombre.webp", alt="Prenotazione", loading="eager" %}
 

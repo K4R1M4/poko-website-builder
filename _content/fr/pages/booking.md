@@ -6,7 +6,7 @@ uuid: 1c57dca44576
 localizationKey: 056629ecb78c
 name: Réservation
 eleventyNavigation:
-  order: 6
+  order: 7
 ---
 {% image src="/_images/Main-clefs-ombre.webp", alt="Réservation", loading="eager" %}
 
