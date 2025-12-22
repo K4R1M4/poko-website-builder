@@ -59,6 +59,7 @@ main > section {
 body > header {
     /* padding-block-end: initial; */
     border-block-end: initial;
+    view-transition-name: main-nav;
 }
 body > header nav ul {
     /* all: initial; */
@@ -319,4 +320,15 @@ img[src="/assets/images/vnGqJC_t4o-480.webp"] {
         10px 100%,
         10px 100%;
     background-attachment: local, local, scroll, scroll;
+}
+
+/* Site wide view transitions */
+img[src^="/assets/images/w3y4P6hdm3"] {
+    view-transition-name: farm-illu;
+}
+img[src^="/assets/images/l3dXXbGNjS"] {
+    view-transition-name: room-illu;
+}
+img[src^="/assets/images/mUyNhMK-9F"] {
+    view-transition-name: table-illu;
 }
