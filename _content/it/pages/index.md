@@ -20,7 +20,7 @@ Una Scelta è il camino intrapreso da Karima ed Eric, due italiani nel cuore, pa
 
 Nella lora azienda di 10 ettari, producono vino, olio d'oliva e ortaggi, e vi accolgono in un contesto sereno ed esclusivo, per un'immersione nel ritmo della natura.
 
-Alloggio, condivisione, laboratorio di cucina, passeggiate, pasti fatti in casa, travel plannig e scoperte : un soggiorno semplice, autentico e profondamente vitale
+Alloggio, condivisione, laboratorio di cucina, passeggiate, pasti fatti in casa, travel planning e scoperte : un soggiorno semplice, autentico e profondamente vitale
 
 <section class="share-cta full-bleed-before flow">
   <p>Venite a condividere la nostra passione nel nostro piccolo paradiso a un'ora da Roma</p>
