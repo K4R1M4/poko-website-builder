@@ -7,7 +7,6 @@ localizationKey: 056629ecb78c
 name: Prenotazione
 eleventyNavigation:
   order: 7
-vars: {}
 ---
 {% image src="/_images/Main-clefs-ombre.webp", alt="Prenotazione", loading="eager" %}
 
@@ -15,7 +14,7 @@ vars: {}
 
 Le richieste di prenotazione devono essere inviate via e-mail a {{ data.email | emailLink }}.
 Le disponibilità possono essere consultate nel calendario qui sotto.
-Il prezzo della camera è di 165€, colazione per 2 persone inclusa (+10€ per ogni persona aggiuntiva).
+Il prezzo della camera è di 200 € nei mesi di aprile, maggio e ottobre e di 240 € da giugno a settembre (+25 € per ogni persona aggiuntiva). La colazione è inclusa.
 
 ## Condizioni di soggiorno.
 
