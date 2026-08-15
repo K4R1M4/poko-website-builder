@@ -14,7 +14,7 @@ eleventyNavigation:
 
 Booking requests should be sent by email to {{ data.email | emailLink }}.
 Availability can be checked on the calendar below.
-The room rate is €200 in April, May, and October, and €240 from June to September (+€25 for each additional guest). Breakfast is included.
+The room rate is €180 in April, May, and October, and €200 from June to September (+€25 for each additional guest). Breakfast is included.
 
 ## Stay Conditions
 

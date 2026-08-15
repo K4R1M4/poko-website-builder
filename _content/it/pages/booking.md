@@ -14,7 +14,7 @@ eleventyNavigation:
 
 Le richieste di prenotazione devono essere inviate via e-mail a {{ data.email | emailLink }}.
 Le disponibilità possono essere consultate nel calendario qui sotto.
-Il prezzo della camera è di 200 € nei mesi di aprile, maggio e ottobre e di 240 € da giugno a settembre (+25 € per ogni persona aggiuntiva). La colazione è inclusa.
+Il prezzo della camera è di 180 € nei mesi di aprile, maggio e ottobre e di 200 € da giugno a settembre (+25 € per ogni persona aggiuntiva). La colazione è inclusa.
 
 ## Condizioni di soggiorno.
 

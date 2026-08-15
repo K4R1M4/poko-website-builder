@@ -14,7 +14,7 @@ eleventyNavigation:
 
 Les demandes de réservation sont à envoyer par mail à {{ data.email | emailLink }}.
 Les disponibilités peuvent être consultées sur le calendrier ci-dessous.
-Le prix de la chambre est de 200€ en avril, mai et octobre et de 240€ de juin à septembre ( + 25€ par personne supplémentaire).  Le petit-déjeuner est inclus.  
+Le prix de la chambre est de 180€ en avril, mai et octobre et de 200€ de juin à septembre ( + 25€ par personne supplémentaire).  Le petit-déjeuner est inclus.  
 
 ## Conditions de séjour
 
